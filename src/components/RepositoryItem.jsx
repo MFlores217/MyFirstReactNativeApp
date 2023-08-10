@@ -11,7 +11,7 @@ const RepositoryItemHeader = (props) => (
         </View>
         <View style={{flex: 1, justifyContent: 'center'}}>
             <StyledText fontWeight='bold'>{props.fullName}</StyledText>
-            <StyledText>{props.description}</StyledText>
+            <StyledText color='secondary'>{props.description}</StyledText>
             <StyledText style={styles.language}>{props.language}</StyledText>
         </View>
     </View>
@@ -28,8 +28,7 @@ const RepositoryItem = (props) => (
 const styles = StyleSheet.create({
     container: {
         padding: 20,
-        paddingBottom: 5, 
-        paddingTop: 5
+        paddingVertical: 5
     },
     cursiva: {
         color: '#09f',
@@ -41,6 +40,7 @@ const styles = StyleSheet.create({
         color: theme.colors.white,
         backgroundColor: theme.colors.primary,
         alignSelf: 'flex-start',
+        marginVertical: 4,
         borderRadius: 4,
         overflow: 'hidden'
     },
